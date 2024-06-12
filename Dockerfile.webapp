@@ -1,0 +1,10 @@
+# Dockerfile for Webapp
+FROM python:3.10
+
+WORKDIR /app
+COPY webapp /app
+
+RUN pip install django djangorestframework django-cors-headers requests
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8010"]
+

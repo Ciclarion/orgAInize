@@ -1,0 +1,11 @@
+# Dockerfile for Chain-Server
+FROM python:3.10
+
+WORKDIR /app
+COPY chain-server /app
+
+RUN pip install -U langchain-cli PyPDF2 langchain_nvidia_trt langchain-huggingface langchain-community langchain-core langchain-chroma python-multipart
+
+
+CMD ["python", "server.py"]
+

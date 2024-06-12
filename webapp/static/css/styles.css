@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"],
+form input[type="password"],
+form button {
+    margin-bottom: 10px;
+}
+
+#chat-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#chat-messages {
+    margin-bottom: 10px;
+}
+
+#user-input {
+    width: calc(100% - 80px);
+    margin-right: 10px;
+}
+
+#send-btn {
+    width: 70px;
+}

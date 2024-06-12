@@ -1,0 +1,346 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>orgAInize - Votre compagnon IA</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/templatemo-space-dynamic.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.css' %}">
+<!--
+    
+TemplateMo 562 Space Dynamic
+
+https://templatemo.com/tm-562-space-dynamic
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="{% url 'index' %}" class="logo">
+              <h4><img class="img_logo" src="{% static 'images/logo.png' %}" alt="logo orgainize"></h4>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Accueil</a></li>
+              <li class="scroll-to-section"><a href="#about">fonctionnalités</a></li>
+              <li class="scroll-to-section"><a href="#services">Avantages</a></li>
+              <li class="scroll-to-section"><a href="#portfolio">Technologies</a></li>
+              <li class="scroll-to-section"><a href="#contact">Nous contacter</a></li> 
+              <li class="scroll-to-section"><div class="main-red-button"><a href="{% url 'login' %}">Login</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+<div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                            <h6>Bienvenue sur OrgAInize</h6>
+                            <h2>Nous révolutionnons la <em>gestion documentaire</em> &amp; l'<span>assistance IA</span></h2>
+                            <p>OrgAInize est une application web avancée conçue pour aider les organisations à gérer et organiser leurs documents, et permettre un accès sécurisé et efficace à leurs contenus grâce à l'intelligence artificielle.</p> <p> Pensé pour les écoles, orgAInize est conçu pour devenir le compagnon du personnel enseignant; mais également des étudiants afin de les aider tout au long de leurs formations.</p>
+      
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <img src="{% static 'images/banner-right-image.png' %}" alt="orgainize app interface">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="about" class="about-us section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="left-image wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <img src="{% static 'images/about-left-image.png' %}" alt="about orgainize">
+                </div>
+            </div>
+            <div class="col-lg-8 align-self-center">
+                <div class="services">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                                <div class="icon">
+                                    <img src="{% static 'images/service-icon-01.png' %}" alt="gestion formation">
+                                </div>
+                                <div class="right-text">
+                                    <h4>Gestion des Documents & Formations</h4>
+                                    <p>orgAInize vous aide à gérer vos documents et formations facilement et efficacement en vous retrouvant les documents dont vous avez besoins ! </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                                <div class="icon">
+                                    <img src="{% static 'images/service-icon-02.png' %}" alt="gestion document">
+                                </div>
+                                <div class="right-text">
+                                    <h4>Gestion des niveaux d'accès</h4>
+                                    <p>orgAInize sait quel utilisateur à le droit d'accéder à quel document; et ne divulguera jamais d'informations qui ne sont pas censées être connues.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                                <div class="icon">
+                                    <img src="{% static 'images/service-icon-03.png' %}" alt="réponses IA">
+                                </div>
+                                <div class="right-text">
+                                    <h4>Réponses Précises et Rapides</h4>
+                                    <p>orgAInize utilise des modèles de langage avancés pour fournir des réponses précises aux questions basées sur le contenu des documents.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
+                                <div class="icon">
+                                    <img src="{% static 'images/service-icon-04.png' %}" alt="sécurité et confidentialité">
+                                </div>
+                                <div class="right-text">
+                                    <h4>Sécurité et Confidentialité</h4>
+                                    <p>orgAInize fonctionne en local pour garantir que les données sensibles ne quittent jamais les locaux de votre entreprise.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="services" class="our-services section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+                <div class="left-image">
+                    <img src="{% static 'images/services-left-image.png' %}" alt="services image">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+                <div class="section-heading">
+                    <h2>Optimisez votre productivité avec notre service <em>OrgAInize</em> et ses <span>fonctionnalités avancées</span></h2>
+                    <p>OrgAInize simplifie l'accès aux informations et réduit les tâches répétitives, permettant aux employés de se concentrer sur des tâches à plus forte valeur ajoutée. Le gain de temps estimé est le suivant :</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="first-bar progress-skill-bar">
+                            <h4>Gestion des Formations</h4>
+                            <span>70%</span>
+                            <div class="filled-bar"></div>
+                            <div class="full-bar"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="second-bar progress-skill-bar">
+                            <h4>Gestion des Documents</h4>
+                            <span>75%</span>
+                            <div class="filled-bar"></div>
+                            <div class="full-bar"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="third-bar progress-skill-bar">
+                            <h4>Réponses aux questions grâce à l'IA</h4>
+                            <span>95%</span>
+                            <div class="filled-bar"></div>
+                            <div class="full-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="portfolio" class="our-portfolio section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <h2>Découvrez les <span>technologies</span> qui ont permis de créer <em>OrgAInize</em></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row tech-container">
+            <div class="col-lg-3 col-sm-6">
+                <a href="#">
+                    <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <div class="hidden-content">
+                            <h4>NvidiaTensorRT LLM</h4>
+                            <p>Permet l'utilisation de GPU de commerce (RTX3090) pour faire tourner le modèle LLM en Local.</p>
+                        </div>
+                        <div class="showed-content">
+                            <img class="tech-logo" src="{% static 'images/tensorrt-logo.png' %}" alt="Nvidia TensorRT logo">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <a href="#">
+                    <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <div class="hidden-content">
+                            <h4>Nvidia Triton Server</h4>
+                            <p>Serveur permettant l'interaction avec le modèle LLM.</p>
+                        </div>
+                        <div class="showed-content">
+                            <img class="tech-logo" src="{% static 'images/triton-logo.png' %}" alt="Nvidia Triton Server logo">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <a href="#">
+                    <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="hidden-content">
+                            <h4>LangChain</h4>
+                            <p>Framework utilisé pour la conception du pipeline RAG.</p>
+                        </div>
+                        <div class="showed-content">
+                            <img class="tech-logo" src="{% static 'images/langchain-logo.png' %}" alt="LangChain logo">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <a href="#">
+                    <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+                        <div class="hidden-content">
+                            <h4>Django</h4>
+                            <p>Conception de l'app utilisateur.</p>
+                        </div>
+                        <div class="showed-content">
+                            <img class="tech-logo" src="{% static 'images/django-logo.png' %}" alt="Django logo">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <div class="section-heading">
+            <h2>N'hésitez pas à nous contacter</h2>
+            <p>Si vous avez des remarques, questions, suggestions ou bugs; dîtes le nous !</p>
+            <div class="phone-info">
+              <h4>Si c'est un problème urgent: <span><i class="fa fa-phone"></i> <a href="#">0404</a></span></h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <form id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-lg-6">
+                <fieldset>
+                  <input type="name" name="name" id="name" placeholder="Nom" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <input type="surname" name="surname" id="surname" placeholder="Prénom" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Votre email" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>  
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="main-button ">Envoyez Message</button>
+                </fieldset>
+              </div>
+            </div>
+            <div class="contact-dec">
+              <img src="{% static 'images/contact-decoration.png' %}" alt="">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
+          <p>© Copyright 2024 Cédric Bobenrieth; with the use of frameworks from Nvidia, Langchain, DJango, FastApi. 
+          <br>Source Code  : <a rel="nofollow" href="https://templatemo.com">GitHub</a></p>
+          <br>Base HTML Design from : <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/owl-carousel.js' %}"></script>
+  <script src="{% static 'js/animation.js' %}"></script>
+  <script src="{% static 'js/imagesloaded.js' %}"></script>
+  <script src="{% static 'js/templatemo-custom.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form method="post" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password1">Password:</label>
+                <input type="password" name="password1" id="password1" required>
+            </div>
+            <div class="form-group">
+                <label for="password2">Confirm Password:</label>
+                <input type="password" name="password2" id="password2" required>
+            </div>
+            <div class="form-group">
+                <label for="user_type">Role:</label>
+                <select name="user_type" id="user_type">
+                    <option value="admin">Admin</option>
+                    <option value="pro">Pro</option>
+                    <option value="apprenant">Apprenant</option>
+                </select>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>

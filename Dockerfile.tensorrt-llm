@@ -1,0 +1,20 @@
+# Dockerfile for TensorRT-LLM
+FROM nvidia/cuda:12.1.0-devel-ubuntu22.04
+
+RUN apt-get update && apt-get -y install python3.10 python3-pip openmpi-bin libopenmpi-dev git git-lfs
+RUN git lfs install
+
+# Clone TensorRT-LLM repository
+RUN git clone --branch v0.9.0 https://github.com/NVIDIA/TensorRT-LLM.git /TensorRT-LLM
+
+RUN pip install tensorrt-llm==0.9.0 -U --extra-index-url https://pypi.nvidia.com
+
+
+WORKDIR /TensorRT-LLM/examples/llama
+
+# Add script to build the model
+COPY build_model.sh /build_model.sh
+RUN chmod +x /build_model.sh
+
+ENTRYPOINT ["/bin/bash"]
+

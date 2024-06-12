@@ -1,0 +1,18 @@
+# Dockerfile for Triton Inference Server
+FROM nvcr.io/nvidia/tritonserver:24.05-trtllm-python-py3
+
+WORKDIR /opt/tritonserver
+
+COPY tensorrtllm_backend/triton_server /opt/tritonserver/triton_server
+COPY tensorrtllm_backend/scripts /opt/scripts
+
+COPY entrypoint.sh /opt/entrypoint.sh
+
+RUN chmod +x /opt/entrypoint.sh
+
+ENTRYPOINT ["/opt/entrypoint.sh"]
+
+# Exécuter le script pour lancer le serveur Triton
+#CMD ["python3", "/opt/scripts/launch_triton_server.py", "--model_repo", "/opt/tritonserver/triton_server", "--world_size", "1"]
+
+#CMD ["/bin/bash"]
