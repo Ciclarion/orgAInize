@@ -58,7 +58,7 @@ To set up the project, follow these two easy steps:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/OrgAInize.git
+    git clone https://github.com/ciclarion/OrgAInize.git
     cd OrgAInize
     ```
 
