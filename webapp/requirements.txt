@@ -1,0 +1,10 @@
+django
+djangorestframework
+django-cors-headers
+numpy
+nvidia-pyindex
+langchain
+chromadb
+
+
+https://drive.google.com/uc?export=download&id=1HqvBWNxQDoFRc6pigfqYqiosSRd8WBgO

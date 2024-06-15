@@ -1,8 +1,12 @@
+<p align="center">
+  <img src="https://github.com/ciclarion/orgAInize/blob/main/logo.jpg?raw=true" />
+</p>
+
 # OrgAInize
 
 ## Overview
 
-OrgAInize is a AI-powered project designed to streamline organization and productivity through advanced natural language processing capabilities. 
+OrgAInize is a AI-powered project designed to help organizations manage and organize their documents, providing secure and efficient access to their content through artificial intelligence.Designed for schools, OrgAInize is crafted to become a companion for both teaching staff and students, aiding them throughout their educational journey.
 
 OrgAInize aims to empower companies with intelligent management of their documents and training materials. By running the AI locally, it ensures that information remains within the company, learning (or unlearning) through a RAG pipeline. Users can interact with a chatbot to query the content of these documents and automatically retrieve the documents upon request. The system supports different access levels, facilitating use across the entire organization at various scales.
 
@@ -38,15 +42,17 @@ OrgAInize is built using several key technologies, each contributing to differen
 
 - Unbutu (tested on 24.04)
 - Good Nvidia GPU with capabilites to run CUDA 12.x (tested on RTX3090)
-- Docker installed 
 
 ## Installation
 
 The installation process is straightforward, facilitated by the design of a shell script and the deployment of Docker containers for each component (totaling 4 Docker containers). However, it's essential to note that the complete installation process take a lot of time as it will : 
--Set-up all dockers
--Download the model from HuggingFace
--Convert the model to TensorRT
--Config all the servers
+- Install docker
+- Install Nvidia Container Toolkit
+- Configure it
+- Set-up all dockers
+- Download the model from HuggingFace
+- Convert the model to TensorRT
+- Config all the servers
 
 To set up the project, follow these two easy steps:
 
@@ -58,7 +64,7 @@ To set up the project, follow these two easy steps:
 
 2. **Run the Setup Script**:
     ```bash
-    ./install.sh
+    sudo ./install.sh
     ```
 Note : All the scripts are designed to work with Vigostral-7B model. If you want to use another one, you'll have to change the "git clone " line from Huggingface.
 
@@ -67,18 +73,29 @@ Note : All the scripts are designed to work with Vigostral-7B model. If you want
 To start the entire system you only need , execute the `start.sh` script:
 
 ```bash
-./start.sh
+sudo ./start.sh
 ```
 
-This will initialize and run all necessary Docker containers for the web application, chain server, and Triton inference server. You will then be able to access the website on 127.0.0.1:8010 
+This will initialize and run all necessary Docker containers for the web application, chain server, and Triton inference server. You will then be able to access the website on 127.0.0.1:8010. 
+Note : The triton-inference-server take some time to loads; so you'll have to wait somes minutes (approx 3) before being able to use the chatbot !
+
+The Account you can use are : 
+
+Professional / Admin account :
+User : root
+Pwd : root
+
+Student test account : 
+User : Toha 
+Pwd : rootroot
 
 To stop the services, use the stop.sh script:
 ```bash
-./stop_server.sh
+sudo ./stop_server.sh
 ```
 ## Workflow
 
-1. **User Interaction with WebApplication**: Users interact with the WebApplication to upload/manage documents or create/amange formations.
+1. **User Interaction with WebApplication**: Users interact with the WebApplication to upload/manage documents or create/manage formations.
 
 2. **Data Processing with Langchain-Server and ChromaDB**:
    - The WebApplication sends the documents and relevant metadata to the Langchain-server.
@@ -91,6 +108,10 @@ To stop the services, use the stop.sh script:
    - The relevant information is then sent to the Nvidia Triton Server, where our LLM model is running, to generate the final response.
 
 4. **Response Delivery to User**: The generated answer is returned to the user from the Triton Server, providing a seamless user experience.
+
+Note : A fake formation called "DS8" as well as a fake internal document called "Invoice Llam" are already inside the website database to let you test directly some queries on them !
+
+5. **Admin backend**: The administration of the website (user creation, suppresion of conversation, etc...) can be done via the Admin system of Django that you can reach on 127.0.0.1:8010/admin
 
 
 ## Acknowledgements
