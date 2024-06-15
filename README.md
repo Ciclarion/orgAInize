@@ -77,6 +77,7 @@ sudo ./start.sh
 ```
 
 This will initialize and run all necessary Docker containers for the web application, chain server, and Triton inference server. You will then be able to access the website on 127.0.0.1:8010. 
+
 Note : The triton-inference-server take some time to loads; so you'll have to wait somes minutes (approx 3) before being able to use the chatbot !
 
 The Account you can use are : 
